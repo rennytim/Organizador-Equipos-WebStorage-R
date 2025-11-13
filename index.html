@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página y de la vista previa (WhatsApp) -->
+    <title>Organizador de Equipos para Torneos</title>
+    <!-- Descripción de la página y de la vista previa (WhatsApp) -->
+    <meta property="og:title" content="Organizador de Equipos para Torneos (prototipo)" />
+    <meta name="description" content="Prototipo de un organizador de equipos para torneos con TypeScript" />
+    <meta property="og:description" content="Prototipo de un organizador de equipos para torneos con TypeScript" />
+    <!-- Imagen que se muestra en WhatsApp (logo o imagen destacada, 800x418 px recomendado) -->
+    <meta property="og:image" content="./recursos/og-image.png" />
+    <!-- URL del proyecto -->
+    <meta property="og:url" content="https://tu-proyecto-url.com" />
+    <meta property="og:type" content="website" />
+    <meta rel="icon" type="image/ico" href="./resources/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h3 style="width: 320px; ">Organizador de Equipos para Torneos</h3>
+    <section id="torneo" hidden>
+        <h3>Registro de Equipos</h3>
+    </section>
+    <section style="font-size: 10px;">
+        <div>
+            <input type="text" id="torneo_inpNombreEquipo" placeholder="Nombre Equipo" >
+            <input type="text" id="torneo_inpLicencia1" placeholder="Licencia 1">
+            <input type="text" id="torneo_inpLicencia2" placeholder="Licencia 2" >
+            <input type="text" id="torneo_inpLicencia3" placeholder="Licencia 3" >
+            <input type="text" id="torneo_inpLicencia4" placeholder="Licencia 4" >
+            <input type="text" id="torneo_inpLicencia5" placeholder="Licencia 5" >
+            <button id="torneo_btAgregarEquipo">Agregar Equipo</button>
+        </div>
+        <h3>Equipos Registrados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 100px;">Nombre</th>
+                        <th style="width: 100px;">Licencia 1</th>
+                        <th style="width: 100px;">Licencia 2</th>
+                        <th style="width: 100px;">Licencia 3</th>
+                        <th style="width: 100px;">Licencia 4</th>
+                        <th style="width: 100px;">Licencia 5</th>
+                    </tr>
+                </thead>
+                <tbody id="torneo_divEquiposRegistrados"> </tbody>
+            </table>
+    </section>
+    <script type="module">
+        import Cl_index from "./dist/index.js";
+        new Cl_index()
+    </script>
+</body>
+</html>
