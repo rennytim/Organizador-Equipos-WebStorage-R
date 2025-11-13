@@ -5,6 +5,9 @@ export default class Cl_vTorneo extends Cl_vGeneral {
         this.btAgregarEquipo = this.crearHTMLButtonElement("btAgregarEquipo", {
             onclick: () => this.agregarEquipo(),
         });
+        this.btLimpiarCampos = this.crearHTMLButtonElement("btLimpiarCampos", {
+            onclick: () => this.limpiarImputs(),
+        });
         this.divEquiposRegistrados = this.crearHTMLElement("divEquiposRegistrados", {
             type: tHTMLElement.CONTAINER,
             refresh: () => this.mostrarEquiposRegistrados(),
